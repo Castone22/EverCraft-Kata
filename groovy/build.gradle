@@ -1,5 +1,10 @@
-apply plugin: 'eclipse'
+apply plugin: 'idea'
 apply plugin: 'groovy'
+
+version = "1.0"
+description = "TDD example for groovy from the Evercraft kata"
+
+sourceCompatibility = 1.8
 
 repositories {
     mavenCentral()
@@ -8,5 +13,9 @@ repositories {
 dependencies {
     compile 'org.codehaus.groovy:groovy-all:2.4.5'
     testCompile 'junit:junit:4.12'
-    testCompile 'org.spockframework:spock-core:1.0-groovy-2.4'
+    testCompile group: 'org.spockframework', name: 'spock-core', version: '1.1-groovy-2.4'
+    testCompile group: 'org.hamcrest', name: 'hamcrest-core', version: '1.3'
+    testCompile group: 'org.hamcrest', name: 'hamcrest-library', version: '1.3'
+
+
 }
