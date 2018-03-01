@@ -50,22 +50,4 @@ class GameCharacterSpec extends Specification {
             assertThat character.rollDie(), allOf(greaterThanOrEqualTo(1), lessThanOrEqualTo(20))
         }
     }
-
-    def 'An attack with a higher roll than armor class hits'(){
-        def roll = 11
-        def result = character.attack(character, roll)
-        expect: result is(true)
-    }
-
-    def 'An attack with a lower roll than armor class misses'(){
-        def roll = 9
-        def result = character.attack(character, roll)
-        expect: result is(false)
-    }
-
-    def 'Attacker also wins if roll is the same as armor class'(){
-        def roll = 10
-        def result = character.attack(character, roll)
-        expect: result is(true)
-    }
 }

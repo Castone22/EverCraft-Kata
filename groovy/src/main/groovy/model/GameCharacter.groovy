@@ -9,8 +9,4 @@ class GameCharacter {
     def rollDie(){
         Math.abs(new Random().nextInt() % 20) + 1
     }
-
-    def attack(GameCharacter character, int roll) {
-        character.armorClass <= roll
-    }
 }
