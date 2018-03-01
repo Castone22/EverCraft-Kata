@@ -1,10 +1,10 @@
 package model
 
+import enums.Alignment
 import spock.lang.Specification
 
 import static org.hamcrest.MatcherAssert.assertThat
 import static org.hamcrest.Matchers.greaterThanOrEqualTo
-import static org.hamcrest.Matchers.is
 import static org.hamcrest.Matchers.lessThanOrEqualTo
 import static org.hamcrest.core.AllOf.allOf
 import static org.hamcrest.core.IsEqual.equalTo
