@@ -1,5 +1,6 @@
-package model
+package enums
 
+import enums.Alignment
 import spock.lang.Specification
 
 import static org.hamcrest.MatcherAssert.assertThat

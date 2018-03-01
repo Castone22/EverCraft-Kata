@@ -1,4 +1,4 @@
-package model
+package enums
 
 enum Alignment {
     EVIL('Evil'),
