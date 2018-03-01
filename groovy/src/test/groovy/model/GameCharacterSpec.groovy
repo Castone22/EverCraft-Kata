@@ -1,8 +1,10 @@
 package model
 
+import enums.AbilityScore
 import enums.Alignment
 import spock.lang.Specification
 
+import static enums.AbilityScore.*
 import static org.hamcrest.MatcherAssert.assertThat
 import static org.hamcrest.Matchers.greaterThanOrEqualTo
 import static org.hamcrest.Matchers.lessThanOrEqualTo
@@ -49,5 +51,16 @@ class GameCharacterSpec extends Specification {
         400.times {
             assertThat character.rollDie(), allOf(greaterThanOrEqualTo(1), lessThanOrEqualTo(20))
         }
+    }
+
+    def 'A character has ability scores which default to 10'() {
+        expect:
+        def abilityScores = character.abilityScores
+        assertThat abilityScores[STRENGTH], equalTo(10)
+        assertThat abilityScores[CONSTITUTION], equalTo(10)
+        assertThat abilityScores[CHARISMA], equalTo(10)
+        assertThat abilityScores[INTELLIGENCE], equalTo(10)
+        assertThat abilityScores[WISDOM], equalTo(10)
+        assertThat abilityScores[DEXTERITY], equalTo(10)
     }
 }

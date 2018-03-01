@@ -1,0 +1,5 @@
+package enums
+
+enum AbilityScore {
+    STRENGTH, DEXTERITY, CONSTITUTION, WISDOM, INTELLIGENCE, CHARISMA
+}
