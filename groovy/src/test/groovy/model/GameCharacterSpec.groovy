@@ -3,7 +3,6 @@ package model
 import spock.lang.Specification
 
 import static org.hamcrest.MatcherAssert.assertThat
-import static org.hamcrest.Matchers.both
 import static org.hamcrest.Matchers.greaterThanOrEqualTo
 import static org.hamcrest.Matchers.lessThanOrEqualTo
 import static org.hamcrest.core.AllOf.allOf
@@ -46,7 +45,7 @@ class GameCharacterSpec extends Specification {
 
     def 'A character can roll a die, it must land between 1 and 20'() {
         expect:
-        4000.times {
+        400.times {
             assertThat character.rollDie(), allOf(greaterThanOrEqualTo(1), lessThanOrEqualTo(20))
         }
     }
