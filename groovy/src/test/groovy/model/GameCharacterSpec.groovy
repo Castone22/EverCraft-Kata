@@ -1,6 +1,5 @@
 package model
 
-import enums.AbilityScore
 import enums.Alignment
 import spock.lang.Specification
 
